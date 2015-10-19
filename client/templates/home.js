@@ -5,6 +5,7 @@ Template['home'].helpers({
   filesToUpload: function() {
     return Uploader.info.get();
   }
+  
 });
 
 Template['uploadedInfo'].helpers({
@@ -19,6 +20,12 @@ Template['uploadedInfo'].events({
   'click .deleteUpload':function() {
     if (confirm('Are you sure?')) {
       Meteor.call('deleteFile', this._id);
+      var pics = SessionAmplify.get('pics')
+      var index = pics.indexOf(this._id);
+      if (index > -1) {
+       pics.splice(index, 1);
+      }
+      SessionAmplify.set('pics',pics);
     }
   }
 })

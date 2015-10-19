@@ -6,8 +6,8 @@
 
         <div class="panel panel-default">
             <!-- Default panel contents -->
-            <div class="panel-heading"><h2 class="panel-title">Bootstrap</h2></div>
-            <div class="panel-body">
+            <!-- <div class="panel-heading"><h2 class="panel-title">Bootstrap</h2></div> -->
+            <!-- <div class="panel-body">
                 <p>We display several possible configurations for the upload component.
                 <ul>
                     <li><b>Uploads</b>, which holds list of uploads and its content is updated on client and reactively
@@ -19,28 +19,28 @@
                 </ul>
                 </p>
                 <p>In the bottom of the page is a list of all uploaded files in the Uploads collection. We showcase also how to delete those files.</p>
-            </div>
+            </div> -->
 
             <!-- List group -->
             <ul class="list-group">
-                <li class="list-group-item">
+                <!-- <li class="list-group-item">
                     <label>Simple</label>
                     <pre class="well">&#123;&#123;&gt; upload_bootstrap &#125;&#125;</pre>
                     {{> upload_bootstrap }}
-                </li>
+                </li> -->
                 <li class="list-group-item">
                     <label>Multiple files</label>
-                    <pre class="well">&#123;&#123;&gt; upload_bootstrap multiple=true &#125;&#125;</pre>
-                    {{> upload_bootstrap multiple=true }}</li>
-                <li class="list-group-item">
+                    <pre class="well">&#123;&#123;&gt; upload_bootstrap multiple=true  &#125;&#125;</pre>
+                    {{> upload_bootstrap multiple=true fileTypes='image/*' callbakc = myCallbacks}}</li>
+                <!-- <li class="list-group-item">
                     <label>Extension filter: .jpg and .png only</label>, for more info go to <a
                         href="http://www.w3schools.com/tags/att_input_accept.asp">http://www.w3schools.com/tags/att_input_accept.asp</a>
                     <pre class="well">&#123;&#123;&gt; upload_bootstrap fileTypes='.png,.jpg' &#125;&#125;
 or
 &#123;&#123;&gt; upload_bootstrap fileTypes='image/*' &#125;&#125;</pre>
                     {{> upload_bootstrap fileTypes='.png,.jpg' }}
-                </li>
-                <li class="list-group-item">
+                </li> -->
+                <!-- <li class="list-group-item">
                     <label>Form data</label>
 
                     <p>In this example we will send extra form data to the server, in which we tell to which directory
@@ -54,7 +54,8 @@ or
 
                     <pre class="well">&#123;&#123;&gt; upload_bootstrap fileTypes='image/*' formData=myFormData &#125;&#125;</pre>
 
-                    <pre class="well">//server configuration (file: /server/init.js)
+                    <pre class="well">
+                    //server configuration (file: /server/init.js)
 Meteor.startup(function () {
   UploadServer.init({
     tmpDir: process.env.PWD + '/.uploads/tmp',
@@ -104,12 +105,12 @@ Meteor.startup(function() {
                         {{/with}}
                     </div>
 
-                </li>
+                </li> -->
             </ul>
         </div>
 
 
-        <div class="panel panel-default">
+       <!--  <div class="panel panel-default">
             <div class="panel-heading">
                 <h3>Semantic UI (looks better when only Semantic UI is used)</h3>
             </div>
@@ -126,10 +127,10 @@ Meteor.startup(function() {
                         {{> upload_semanticUI multiple=true }}</li>
                 </ul>
             </div>
-        </div>
+        </div> -->
 
 
-        <div class="panel panel-default">
+        <!-- <div class="panel panel-default">
             <div class="panel-heading">
                 <h3>Dropzone</h3>
             </div>
@@ -147,7 +148,7 @@ Meteor.startup(function() {
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> -->
 
 
         <div class="panel">

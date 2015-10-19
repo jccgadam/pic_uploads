@@ -1,13 +1,10 @@
 Meteor.startup(function () {
   // init items collection
-  if (Items.find().count() == 0) {
-    Items.insert({name: 'My Item', uploads: []});
-  }
-
   UploadServer.init({
     tmpDir: process.env.PWD + '/.uploads/tmp',
     uploadDir: process.env.PWD + '/.uploads/',
     checkCreateDirectories: true,
+    // acceptFileTypes:'[^\s]+(\.(?i)(jpg|png|gif|bmp))$',
     getDirectory: function(fileInfo, formData) {
       if (formData && formData.directoryName != null) {
         return formData.directoryName;
